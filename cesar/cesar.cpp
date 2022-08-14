@@ -1,6 +1,4 @@
-#include <map>
 #include <utility>
-#include <vector>
 
 #include "cesar.hpp"
 #include "../language/language.hpp"
@@ -70,7 +68,6 @@ void Cesar::cipher(std::ostream& out, const std::string& text, const Language& l
             out << letter;
         }
     }
-    
     out << '\n';
 }
 
@@ -103,9 +100,7 @@ void Cesar::decipher(std::ostream& out, const std::string& text, const Language&
             out << letter;
         }
     }
-    
     out << '\n';
-    
 }
 
 size_t Cesar::get_shift() const
