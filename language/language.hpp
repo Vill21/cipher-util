@@ -20,15 +20,18 @@ public:
     
     static Language      build();
     static Language      build(const std::string& file_path);
-    
+
+    Language&            set_empty(bool empty);
     Language&            set_uppercase(bool uppercase);
     Language&            set_alphabet(const std::string& alphabet);
-    
+
+    bool                 empty() const;
     bool                 uppercase() const;
     const std::string&   get_alphabet() const;
     size_t               get_alphabet_size() const;
     
 private:
+    bool                 _empty { true };
     bool                 _uppercase { false };  // flag which shows if the alphabet contains letters in lower and upper cases
     std::string          _alphabet;             // alphabet in lowercase
 };

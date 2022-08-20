@@ -11,7 +11,7 @@ class Cipher
 public:
     Cipher() = delete;
     Cipher(const std::string& name) { _name = name; }
-    ~Cipher() = default;
+    virtual ~Cipher() = default;
     
     virtual void cipher(std::ostream& out, const std::string& text, const Language& language) = 0;
     virtual void decipher(std::ostream& out, const std::string& text, const Language& language) = 0;
