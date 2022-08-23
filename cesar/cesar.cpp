@@ -2,46 +2,6 @@
 
 #include "cesar.hpp"
 
-Language test_make_EN()
-{
-    Language EN = Language::build()
-                    .set_uppercase(true)
-                    .set_alphabet("abcdefghijklmnopqrstuvwxyz");
-    
-    if (!EN.uppercase()) {
-        return Language::build();
-    }
-    
-    if (EN.get_alphabet() != "abcdefghijklmnopqrstuvwxyz") {
-        return Language::build();
-    }
-    
-    if (EN.get_alphabet_size() != 26) {
-        return Language::build();
-    }
-    
-    return EN;
-}
-
-Language test_make_EN_file()
-{
-    Language EN = Language::build("../example/language/EN");
-    
-    if (!EN.uppercase()) {
-        return Language::build();
-    }
-    
-    if (EN.get_alphabet() != "abcdefghijklmnopqrstuvwxyz") {
-        return Language::build();
-    }
-    
-    if (EN.get_alphabet_size() != 26) {
-        return Language::build();
-    }
-    
-    return EN;
-}
-
 void Cesar::cipher(std::ostream& out, const std::string& text, const Language& language)
 {
     if (language.uppercase()) {

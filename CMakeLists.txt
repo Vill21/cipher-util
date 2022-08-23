@@ -9,6 +9,7 @@ add_executable(cipher_util main.cpp)
 
 add_subdirectory(language)
 add_subdirectory(cesar)
+add_subdirectory(test)
 
 find_package(Boost 1.70.0 REQUIRED COMPONENTS program_options)
 if (Boost_FOUND)
