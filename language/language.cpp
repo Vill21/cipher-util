@@ -20,7 +20,8 @@ Language Language::build(const std::string& file_path)
     std::string line;
     
     getline(language_file, line);
-    std::transform(line.begin(), line.end(), line.begin(), [](unsigned char c){ return std::tolower(c); });
+    std::transform(line.begin(), line.end(), line.begin(),
+                   [](unsigned char c){ return std::tolower(c); });
     
     bool uppercase = false;
     if (line != "false") {

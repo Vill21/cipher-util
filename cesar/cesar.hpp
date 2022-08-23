@@ -6,7 +6,7 @@
 #include "../cipher/cipher.hpp"
 #include "../language/language.hpp"
 
-class Cesar : Cipher
+class Cesar : public Cipher
 {
 public:
     Cesar() = delete;
